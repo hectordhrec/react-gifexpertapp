@@ -7,6 +7,7 @@ export const AddCategory = ({ setCategories }) => {
     const handleInputChange = (e) => {
         //setInputValue(e.target.value);
         setInputValue(valor => e.target.value);
+        console.log('handleInputchange');
     }
 
     const handleSunmit = (e) => {
@@ -19,6 +20,7 @@ export const AddCategory = ({ setCategories }) => {
 
     return (
         <form onSubmit={ handleSunmit }>
+            <p>{inputValue}</p>
             <input type="text" className="form-control" value={inputValue} onChange={handleInputChange} />
         </form>
     );
